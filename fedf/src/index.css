@@ -1,0 +1,51 @@
+/* ============================================================
+   PLAY SPOT - index.css  (global base styles)
+   Variables, reset, body, and background.
+   ============================================================ */
+
+:root {
+  --bg: #0c1118;
+  --panel: #141c26;
+  --panel-2: #0e151d;
+  --line: #243140;
+  --lime: #c6f432;
+  --lime-dim: #9bc41f;
+  --text: #eaf0f6;
+  --muted: #8a98a8;
+  --font-heading: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* soft glowing background lights */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 400px at 85% -10%, rgba(198, 244, 50, 0.10), transparent 60%),
+    radial-gradient(500px 500px at -10% 110%, rgba(198, 244, 50, 0.06), transparent 60%);
+}
+
+a {
+  color: inherit;
+}
